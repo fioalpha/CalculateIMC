@@ -2,11 +2,12 @@ import java.math.BigDecimal
 import java.math.RoundingMode
 
 fun main(args: Array<String>) {
-    println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val pat = Patient()
+    pat.weight = 16F
+    pat.height = 1.50F
+
+    println("${calculateIMC(pat.weight, pat.height)}")
 }
 
 fun calculateIMC(weight: Float,  height: Float): Float {
@@ -16,8 +17,17 @@ fun calculateIMC(weight: Float,  height: Float): Float {
         .toFloat()
 }
 
-fun diagnostic(imcCalculated: Float): String {
-    return ""
+fun diagnostic(imcCalculated: Float) : String {
+    return when {
+        imcCalculated < 16F -> MORE_THEN_LOW_WEIGHT_GRAVE
+        imcCalculated > 16F && imcCalculated < 16.99F -> LOW_HEIGHT_GRAVE
+        imcCalculated > 17F && imcCalculated < 18.49F -> LOW_HEIGHT
+        imcCalculated > 18.50F && imcCalculated < 24.99F -> NORMAL_HEIGHT
+        imcCalculated > 25F && imcCalculated < 29.99F -> OVER_HEIGHT
+        imcCalculated > 30F && imcCalculated < 34.99F -> OBESITY_LEVE_1_HEIGHT
+        imcCalculated > 35F && imcCalculated < 39.99F -> OBESITY_LEVE_2_HEIGHT
+        else -> OBESITY_LEVE_3_HEIGHT
+    }
 }
 
 const val MORE_THEN_LOW_WEIGHT_GRAVE = "Baixo peso muito grave"
