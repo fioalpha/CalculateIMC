@@ -4,7 +4,7 @@ import java.math.RoundingMode
 fun main(args: Array<String>) {
 
     val pat = Patient()
-    pat.weight = 16F
+    pat.weight = 19F
     pat.height = 1.50F
 
     println("${calculateIMC(pat.weight, pat.height)}")

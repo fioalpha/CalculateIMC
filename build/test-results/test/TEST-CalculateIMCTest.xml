@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CalculateIMCTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-12-17T11:46:00" hostname="Nets.local" time="0.026">
+  <properties/>
+  <testcase name="when the result between 25 and 29,99 then return SOBREPESO" classname="CalculateIMCTest" time="0.018"/>
+  <testcase name="when the result between 17 and 18,49 then return BAIXO PESO" classname="CalculateIMCTest" time="0.001"/>
+  <testcase name="when the result between 30 and 34,99 then return OBESIDADE GRAU I" classname="CalculateIMCTest" time="0.0"/>
+  <testcase name="calculate test" classname="CalculateIMCTest" time="0.003"/>
+  <testcase name="when the result less or equal 16 then return BAIXO PESO MUITO GRAVE" classname="CalculateIMCTest" time="0.0"/>
+  <testcase name="when the result between 16 and 16,99 then return BAIXO PESO GRAVE" classname="CalculateIMCTest" time="0.0"/>
+  <testcase name="when the result between 35 and 39,99 then return OBESIDADE GRAU II" classname="CalculateIMCTest" time="0.0"/>
+  <testcase name="when the result more or equal 40 then return OBESIDADE GRAU III" classname="CalculateIMCTest" time="0.0"/>
+  <testcase name="when the result between 18,50 and 24,99 then return PESO NORMAL" classname="CalculateIMCTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
